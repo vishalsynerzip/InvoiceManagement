@@ -15,8 +15,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: "/invoicelist/:id",
             templateUrl: "partials/invoicedetail.html",
             controller: "invoiceCntrl"
-            }
-    )
+            })
         .state('addcustomer', {
             url: "addcustomer",
             templateUrl: "partials/addcustomer.html"
@@ -28,6 +27,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('customerlist', {
             url: "customerlist",
             templateUrl: "partials/customerlist.html"
+        })
+        .state('customerlist.customerdetail', {
+            url: "/customerlist/:custid",
+            templateUrl: "partials/customerdetail.html",
+            controller: "invoiceCntrl"
         })
 
 });

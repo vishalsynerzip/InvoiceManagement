@@ -24,7 +24,9 @@
                         #
                     </td>
                     <td>
+                        <a ui-sref='customerlist.customerdetail({custid:cust.custid})'>
                     {{cust.custid}}
+                            </a>
                     </td>
                     <td>
                         {{cust.name}}
@@ -38,4 +40,5 @@
             </table>
         </div>
     </div>
+    <div ui-view></div>
 </div>

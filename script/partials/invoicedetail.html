@@ -16,6 +16,9 @@
                     <th>
                         Total Amount
                     </th>
+                    <th>
+                        Paid
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -64,6 +67,9 @@
                     </td>
                     <td>
                         {{invoices.totalcost}}
+                    </td>
+                    <td>
+                        <input type="checkbox" ng-model="invoices.paid" class="form-control"/>
                     </td>
                 </tr>
 

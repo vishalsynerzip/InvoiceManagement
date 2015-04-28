@@ -9,13 +9,15 @@ angular.module('invoice').controller('invoiceCntrl',['$scope','invoiceService','
             {invoiceid: $scope.invoiceid,
              custinvoiceid: $scope.selectedcust,
             itemlst:itemservice.itemlist,
-            totalcost: $scope.totalcost
+            totalcost: $scope.totalcost,
+                paid : $scope.paid
         });
         $scope.invoiceid=0;
         $scope.custinvoiceid=0;
         $scope.itemlst='';
         $scope.selectedcust='';
         $scope.totalcost=0;
+        $scope.paid=false;
         itemservice.clearlist();
         $scope.invoicelst=invoiceService.invoicelist;
     };
@@ -33,6 +35,7 @@ angular.module('invoice').controller('invoiceCntrl',['$scope','invoiceService','
     $scope.custlist = custservice.customers;
     $scope.invoicelst=invoiceService.invoicelist;
     $scope.invoicelstid = $stateParams.id;
+    $scope.custlstid = $stateParams.custid;
 
 }]);
 
